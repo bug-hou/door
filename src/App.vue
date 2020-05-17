@@ -1,32 +1,79 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <varbat></varbat>
+    <keep-alive exclude="home">
+    <router-view class="view"/>
+    </keep-alive>
   </div>
 </template>
+<script>
+import varbat from '@/components/common/varbat/varbat'
+export default {
+  name:"app",
+  components:{
+    varbat
+  },
+  created(){
+    this.getLocation();
+  },
+  methods: {
+    getLocation(){
+      const self = this;
+      AMap.plugin('AMap.Geolocation', function() {
+      var geolocation = new AMap.Geolocation({
+    // 是否使用高精度定位，默认：true
+        enableHighAccuracy: true,
+    // 设置定位超时时间，默认：无穷大
+        timeout: 10000,
+  })
 
+  geolocation.getCurrentPosition()
+  AMap.event.addListener(geolocation, 'complete', onComplete)
+  AMap.event.addListener(geolocation, 'error', onError)
+
+  function onComplete (data) {
+    // data是具体的定位信息
+    self.$store.commit("addLocation",data);
+  }
+
+  function onError (data) {
+    // 定位出错
+    self.getlonlat();
+  }
+})
+    },
+    getlonlat(){
+      const self = this;
+      AMap.plugin('AMap.CitySearch', function () {
+      var citySearch = new AMap.CitySearch()
+        citySearch.getLocalCity(function (status, result) {
+        if (status === 'complete' && result.info === 'OK') {
+      // 查询成功，result即为当前所在城市信息
+        AMap.plugin('AMap.Geocoder', function() {
+        var geocoder = new AMap.Geocoder({
+        // city 指定进行编码查询的城市，支持传入城市名、adcode 和 citycode
+        city: result.adcode
+      })
+ 
+      var lnglat = result.rectangle.split(";")[0].split(",");
+
+        geocoder.getAddress(lnglat, function(status, data) {
+          if (status === 'complete' && data.info === 'OK') {
+              // data为对应的地理位置详细信息
+              self.$store.commit("addLocation",data.regeocode);
+          }
+        })
+      })
+    }
+  })
+})
+    }
+  },
+}
+</script>
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+@import url(./assets/css/base.css);
+.view{
+  margin-top: 94px;
 }
 </style>
