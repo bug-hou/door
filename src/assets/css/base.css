@@ -15,8 +15,6 @@ body {
     -webkit-tap-highlight-color: transparent; /* webkit是苹果浏览器引擎，tap点击，highlight背景高亮，color颜色，颜色用数值调节 */
     background: var(--color-background);
     color: var(--color-text);
-    /* rem vw/vh */
-    width: 100vw;
   }
   body, ul, ol, dl, dd, h1, h2, h3, h4, h5, h6, p, form, fieldset, legend, input, textarea, select, button, th, td {
   margin:0;

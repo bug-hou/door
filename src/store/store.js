@@ -9,7 +9,9 @@ export default new vuex.Store({
         location:{},
         profile:{},
         status:false,
-        scroll:false
+        scroll:false,
+        star:"",
+        car:""
     },
     mutations:{
         addLocation(state,item){
@@ -18,7 +20,23 @@ export default new vuex.Store({
         },
         addProfile(state,item){
             state.profile = item;
+            state.star = item.star;
+            state.car = item.car;
             state.status = true;
+        },
+        addStar(state,item){
+            state.star.push(item);
+        },
+        deleteStar(state,item){
+            state.star.splice(state.star.indexOf(item),1);
+        },
+        change(state,item){
+            state.car = state.car.replace(item.id+";","");
+            state.profile.time = state.profile.time.replace(state.profile.time.split(";")[item.i]+";","");
+        },
+        addCar(state,obj){
+            state.car += obj.id;
+            state.profile.time += obj.str;
         }
-    }
+    },
 })

@@ -4,6 +4,7 @@ export default function(obj){
     const name = obj.name?obj.name:"小侯";
     const sex = obj.sex?obj.sex:"男";
     const malady = obj.malady?obj.malady:"无";
+    const phone = obj.phone?obj.phone:"无";
     const allergies = obj.allergies?obj.allergies:"无";
     const age = obj.age?obj.age:18;
     const personily = obj.personily?obj.personily:"该用户很懒什么也没有";
@@ -19,7 +20,8 @@ export default function(obj){
            allergies,
            age,
            personily,
-           header
+           header,
+           phone
         }
     })
 }

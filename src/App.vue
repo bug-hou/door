@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <varbat></varbat>
-    <keep-alive exclude="home">
-    <router-view class="view"/>
+    <keep-alive exclude="home,detail,goods,profile,login,good">
+    <router-view  class="view"/>
     </keep-alive>
   </div>
 </template>
@@ -61,19 +61,24 @@ export default {
           if (status === 'complete' && data.info === 'OK') {
               // data为对应的地理位置详细信息
               self.$store.commit("addLocation",data.regeocode);
-          }
-        })
+              }
+            })
+          })
+        }
       })
-    }
-  })
-})
+    })
     }
   },
 }
 </script>
 <style>
 @import url(./assets/css/base.css);
+@import url(//at.alicdn.com/t/font_1814765_zxopmvlc0al.css);
 .view{
   margin-top: 94px;
+  overflow-x: hidden;
+}
+#app{
+  overflow-x: hidden;
 }
 </style>

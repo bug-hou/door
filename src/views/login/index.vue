@@ -8,7 +8,7 @@
       </div>
       <div class="title">
         <div>欢迎登录医站通</div>
-        <div >没有账号?立即注册</div>
+        <div @click="register">没有账号?立即注册</div>
       </div>
       <div v-if="mainshow" ref="reg1">
     <input-item v-for="(item,index) in list1" :key="item.text" :item="item" @blur="regexp1(index)"></input-item>
@@ -17,7 +17,7 @@
     <input-item v-for="(item,index) in list2" :key="item.text" :item="item" @blur.native="regexp2(index)"></input-item>
     </div>
     <div class="yanbox">
-    <input class="yanzheng" type="text" placeholder="请输入验证码" v-model="yan"><div :style="{background:bColor()}" class="div" @click="change">{{data}}</div>
+    <input class="yanzheng" type="text" placeholder="请输入验证码" v-model="yan"><div :style="{background:color}" class="div" @click="change">{{data}}</div>
     </div>
     <div class="login" @click="login">登录
       <p v-show="logshow">账号\密码\验证码错误\勾选规则</p>
@@ -40,6 +40,7 @@ import inputItem from './input/input'
 
 import request from '../../network/profile/user'
 export default {
+  name:"login",
   data () {
     return {
       list1:[
@@ -94,14 +95,17 @@ export default {
       iid:null,
       ppwd:null,
       check:null,
+      color:null
     };
   },
 
   created() {
     if(this.$store.state.status){
       this.$router.push("/profile");
+    }else{
+      this.data = this.random(false);
+      this.color = this.random();
     }
-    this.data = this.random(false);
   },
 
   components: {
@@ -116,7 +120,7 @@ export default {
 
   methods: {
     regexp1(index){
-       const reg1 = /\d{8,13}/
+       const reg1 = /^\d{8,13}$/
        const reg2 = /^[0-9a-zA-Z_]{8,13}$/;
        var value = (this.$refs.reg1.children[index].children[1].value);
        if(index==0){
@@ -171,9 +175,6 @@ export default {
          }
        }
     },
-    bColor(){
-      return this.random();
-    },
     random(boo=true){
         if(boo){
           return "rgb("+Math.floor(Math.random()*266)+","+Math.floor(Math.random()*266)+","+Math.floor(Math.random()*266)+")";
@@ -184,7 +185,7 @@ export default {
     },
     change(){
       this.data = this.random(false);
-      this.bColor();
+      this.color = this.random();
     },
     login(){
       if(this.id&&this.pwd&&this.yan==this.data&&this.check){
@@ -193,6 +194,8 @@ export default {
           pwd:this.ppwd
         }).then(data=>{
           if(data.data){
+             localStorage.setItem("time","");
+             localStorage.setItem("foot","");
             this.$store.commit("addProfile",data.data);
             this.$router.push("/profile");
           }else{
@@ -208,14 +211,16 @@ export default {
           this.logshow = false;
         }, 2000);
       }
+    },
+    register(){
+      this.$router.push("/register");
     }
   }
 }
 
 </script>
 <style scoped>
-@import url(//at.alicdn.com/t/font_1796234_6u7qnbokunm.css);
-@import url(//at.alicdn.com/t/font_1814765_kwvt24j0cpa.css);
+@import url(//at.alicdn.com/t/font_1814765_zxopmvlc0al.css);
 span{
   color: rgb(21,128, 60);
   cursor: pointer;

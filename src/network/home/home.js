@@ -7,7 +7,8 @@ export default function(obj){
         params:{
            table,
            page:obj.page,
-           count:obj.count
+           count:obj.count,
+           type:obj.type
         }
     })
 }

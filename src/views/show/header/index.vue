@@ -3,9 +3,9 @@
   <div id="header">
      <div class="list">
          <ul v-for="item in list" :key="item.title">
-             <li>{{item.title}}</li>
+             <li @click="goods(item.title)">{{item.title}}</li>
              <div>
-                 <li v-for="it in item.content" :key="it" :class="{active:random()}">{{it}}</li>
+                 <li v-for="it in item.content" :key="it" :class="{active:random()}" @click="goods(it)">{{it}}</li>
              </div>
          </ul>
      </div>
@@ -13,13 +13,24 @@
        <swiper>
        </swiper>
      </div>
-     <div></div>
+     <div class="box">
+         <div class="logo">
+             <img src="~@/assets/image/logo.png" alt="">
+             <h2>医站通</h2>
+         </div>
+         <div class="icon">
+             <p class="iconfont icon-zhengpin1">自营正品</p>
+             <p class="iconfont icon-jiaoyi">担保交易</p>
+             <p class="iconfont icon-yaoshi">药师服务</p>
+         </div>
+     </div>
   </div>
 </template>
 
 <script>
 import swiper from "./swiper"
 export default {
+name:"goods",
   data () {
     return {
         list:[
@@ -37,7 +48,7 @@ export default {
                     "儿科用药"
                 ]
             },{
-                title:"中心药品",
+                title:"中西药品",
                 content:[
                     "肠胃用药",
                     "阳痿早泄",
@@ -50,7 +61,7 @@ export default {
                     "补肾用药"
                 ]
             },{
-                title:"健康保健",
+                title:"保健",
                 content:[
                     "美容养颜",
                     "补肾强身",
@@ -106,13 +117,51 @@ export default {
 
   methods: {
       random(){
-          return Math.floor(Math.random()*3);
+          return Math.floor(Math.random()*1.5);
+      },
+      goods(goods){
+         this.$router.push(
+         {
+            path:"/goods",
+            query:{
+                type:goods
+            }
+         });
       }
   }
 }
 
 </script>
 <style scoped>
+@import url(//at.alicdn.com/t/font_1814765_zxopmvlc0al.css);
+.box{
+    width: calc(100% - 16% - 800px);
+    height: 505px;
+    border-right: 1px solid #999;
+}
+.logo{
+    width: 100%;
+    height: 205px;
+    font-size: 40px;
+    color: #1abc9c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px dashed #999;
+}
+img{
+    width: 50px;
+    height: 50px;
+}
+.icon>p{
+  height: 99px;
+  width: 100%;
+  font-size: 25px;
+  line-height: 100px;
+  text-align: center;
+  color: #1abc9c;
+    border-bottom: 1px dashed #999;
+}
 .active{
     color: #1abc9c;
 }

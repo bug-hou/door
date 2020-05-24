@@ -1,10 +1,12 @@
 <!--  -->
 <template>
-  <div class="item">
+  <div class="item" @click="push">
       <div class="img"><img :src="item.hint" alt=""></div>
-      <div>
-          <p>{{item.name}}</p>
-          <p>{{item.title}}</p>
+      <div class="main">
+          <p>{{item.name|replace}}</p>
+        <div>
+          <p>{{item.price}}</p>
+        </div>
       </div>
   </div>
 </template>
@@ -19,6 +21,15 @@ export default {
   props:{
       item:{}
   },
+  created() {
+    this.price();
+  },
+
+  filters:{
+    replace(item){
+        return item.replace(":","");
+    }
+  },
 
   components: {},
 
@@ -26,13 +37,49 @@ export default {
 
   mounted(){},
 
-  methods: {}
+  methods: {
+    price(){
+      this.item.price = '￥'+(Math.random()*100).toFixed(2) + "元";
+    },
+    push(){
+      this.$router.push("/detail/"+this.item.id);
+    }
+  }
 }
 
 </script>
 <style scoped>
+@import url(//at.alicdn.com/t/font_1814765_zxopmvlc0al.css);
+.iconfont{
+  color: white;
+}
 .img{
-  width: 200px;
-  height: 220px;
+  width: 150px;
+  height: 200px;
+  margin: auto;
+}
+img{
+  width: 150px;
+  height: 200px;
+}
+.main>div{
+  width: 160px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  font-size: 24px;
+  color: #1abc9c; 
+}
+.main>p{
+  color: black;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 16px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 </style>

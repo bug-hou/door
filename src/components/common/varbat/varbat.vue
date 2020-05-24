@@ -5,7 +5,7 @@
       {{$store.state.address}}
     </div> -->
     <div class="logo">
-      医站通
+      <img src="~@/assets/image/register.png" alt="">
     </div>
     <div class="box">
     <item path="/home">
@@ -14,7 +14,9 @@
     <item path="/show">
     <div class="a">推荐</div>
     </item>
+    <item path="/hospital">
     <div class="a">医院</div>
+    </item>
     <div class="a">联系医生</div>
     <item path="/cars">
     <div class="a">收藏夹</div>
@@ -73,7 +75,7 @@ export default {
 
 </script>
 <style scoped>
-@import url(//at.alicdn.com/t/font_1814765_kegnfaclbjo.css);
+@import url(//at.alicdn.com/t/font_1814765_zxopmvlc0al.css);
 .a:hover{
   color: #1abc9c;
 }
@@ -99,6 +101,10 @@ export default {
    font-size: 61px;
    color: #1abc9c;
    cursor: pointer;
+}
+.logo>img{
+  width: 200px;
+  height: 50px;
 }
 .box{
   display: flex;

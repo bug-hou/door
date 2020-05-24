@@ -39,7 +39,7 @@ export default {
 
   mounted() {
   if(this.$store.state.scroll){
-    document.documentElement.scrollTop = 1300;
+    document.documentElement.scrollTop = 1500;
        this.$store.state.scroll = false;
      }
   },
@@ -54,7 +54,7 @@ export default {
 
 </script>
 <style scoped>
-@import url(//at.alicdn.com/t/font_1814765_8140s2ht7rk.css);
+@import url(//at.alicdn.com/t/font_1814765_zxopmvlc0al.css);
 #home{
   margin-top: 94px;
   width: 100%;

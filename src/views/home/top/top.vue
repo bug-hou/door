@@ -77,8 +77,7 @@ input{
     outline: none;
     border: none;
 }
-@import url(//at.alicdn.com/t/font_1796234_6u7qnbokunm.css);
-@import url(//at.alicdn.com/t/font_1814765_3qj03pdgccj.css);
+@import url(//at.alicdn.com/t/font_1814765_zxopmvlc0al.css);
 #top{
     width: 100%;
     height: 120px;
