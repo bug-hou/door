@@ -1,7 +1,8 @@
 <!--  -->
 <template>
   <div id="top">
-      <div class="logo"><img src="~@/assets/image/logo.png" alt="">医站通</div>
+      <!-- <div class="logo"><img src="~@/assets/image/logo.png" alt="">医站通</div> -->
+      <div class="logo"></div>
         <div class="input">
           <input type="text" v-model="data" placeholder="请输入批准文号、通用名、商品名">
           <div class="iconfont icon-tubiao1">搜索</div>
@@ -58,6 +59,7 @@ export default {
     position: absolute;
 }
 .input{
+    transform: translateX(-35px);
     position: relative;
     width: 60%;
     height: 44px;

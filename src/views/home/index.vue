@@ -23,7 +23,7 @@
            <div class="iconfont icon-weizhi">四川省眉山市彭山县锦江学院</div>
          </div>
        </div>
-       <div class="footer">发送信息</div>
+       <div class="footer iconfont icon-feiji">发送信息</div>
     </div>
     <div class="end"></div>
   </div>
@@ -54,7 +54,7 @@ export default {
 
 </script>
 <style scoped>
-@import url(//at.alicdn.com/t/font_1814765_zxopmvlc0al.css);
+@import url(//at.alicdn.com/t/font_1814765_j9ejvccp2be.css);
 #home{
   margin-top: 94px;
   width: 100%;

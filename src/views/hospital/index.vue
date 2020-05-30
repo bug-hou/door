@@ -1,26 +1,106 @@
 <!--  -->
 <template>
-  <div style="color:red">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quam eos magnam et iste impedit saepe accusamus illum, sequi, quas eaque, nisi commodi pariatur quia quisquam maiores! Molestiae explicabo repudiandae dolorum libero cupiditate, perspiciatis iure vel eveniet alias perferendis consectetur fugit sapiente voluptatum nam labore at ad beatae magni enim voluptates tenetur quaerat fugiat cumque nulla. Enim non sapiente exercitationem reprehenderit at sed nam magni! Amet sit nobis reiciendis veniam ullam qui veritatis rerum itaque sapiente esse voluptate impedit saepe consectetur vero non laudantium dicta nulla nihil eum asperiores aut earum, cumque natus quisquam? Aut laudantium explicabo illum perferendis, nulla sed obcaecati sit magnam rem cupiditate delectus hic suscipit, corrupti neque esse ipsum distinctio? Provident explicabo quidem voluptates accusamus minus, animi tempore voluptas. Alias, necessitatibus beatae molestiae nemo mollitia rerum cupiditate esse voluptatem quaerat. Explicabo ut laudantium neque animi aliquid. Culpa reiciendis quasi magnam beatae repellat corporis, ullam exercitationem ad! Iste vero nesciunt in quo ea aliquid velit repellat recusandae molestias ad. Corporis qui aliquid perspiciatis adipisci neque debitis nobis quia aspernatur quasi itaque natus, dolor molestias recusandae minima placeat magnam soluta amet laboriosam fugiat ad! Non, magnam? Quis repudiandae odio voluptatum eveniet natus optio dolore minima sequi maxime omnis quam, ipsum, officiis aliquam amet doloremque? Dignissimos non voluptatibus quis. Officiis magnam suscipit ipsa eius nemo repellat debitis beatae ullam voluptate minus saepe culpa odio quibusdam obcaecati eos illum eum at quis iure, dolorem sequi, sit laudantium molestiae? Voluptatum maxime officia praesentium enim, velit, numquam, vero dolore rem nisi illum natus sed nulla ipsa quis temporibus cum repellendus magnam labore! Expedita id, autem consequatur ratione praesentium eligendi fugiat temporibus asperiores. Itaque suscipit id debitis assumenda facilis error accusantium tempore eum? Temporibus ea doloribus voluptate modi, nisi praesentium, deleniti quia tempora distinctio tempore consectetur dolorem in laboriosam? Possimus quas aspernatur officia ad soluta? Placeat praesentium enim consequuntur nisi aliquam similique. A architecto esse ad voluptatum doloribus. Deleniti aliquam, quos quaerat dolores minima, at officiis asperiores ea reiciendis aut blanditiis, iste doloremque aliquid animi? Asperiores similique rerum eius labore amet suscipit vel accusamus, harum minima quisquam libero ducimus repellat, odio, quod maxime? Doloribus facilis perferendis eos soluta voluptatum. Necessitatibus deserunt nemo ipsam deleniti veritatis excepturi cumque tempore, odio, vero in et temporibus modi aperiam atque delectus cupiditate. Dolor, in. Culpa delectus laboriosam odio voluptate explicabo laborum minus consequatur quae iste, atque tenetur libero, neque tempora facere voluptas et minima corporis! Ratione laudantium exercitationem sint, et, alias quas qui ex voluptatum quasi odit ipsum nobis reiciendis perspiciatis reprehenderit labore magnam mollitia illo perferendis, quaerat laboriosam error molestias? Doloremque, dolorum esse? Temporibus alias voluptas illum molestiae veniam voluptates qui eligendi fugiat minima, recusandae excepturi ducimus commodi sunt, magnam quam dolores omnis atque. Obcaecati laudantium consectetur debitis? Eveniet debitis quia illo ipsum natus magni, qui fugit quos dolores quas velit autem vero tenetur, quaerat quae quasi non? Debitis dolore consequuntur expedita eos cupiditate rerum blanditiis veniam maxime voluptas accusantium hic officiis nesciunt itaque architecto natus porro, officia minus ex deserunt. Dignissimos illum facere, dolorem esse nemo velit placeat quos voluptatum impedit reprehenderit est aut, voluptate doloremque unde dolores eveniet aliquid quo tempora natus hic? Omnis aspernatur nulla ea, unde tenetur eligendi, nam voluptates fuga vitae iure accusantium at optio enim ex eius porro? Nam consequuntur ut quisquam, excepturi quo perferendis ipsa, consequatur expedita dignissimos consectetur adipisci esse sequi. Ducimus quae ipsum reprehenderit quod, eos velit modi corporis numquam doloribus voluptatum, ea deserunt soluta delectus accusamus consequatur aspernatur perspiciatis magnam totam illo repudiandae facilis fuga. Nostrum nesciunt minima voluptatum modi quidem, dolorem odio molestias neque doloremque aliquid ea. Aperiam perferendis pariatur dicta quae? Iusto beatae doloribus dignissimos soluta ad nam, molestiae non sint enim perferendis laudantium eaque odio, vel eos. Magnam animi voluptate illo praesentium, rem at, ut necessitatibus sapiente culpa possimus repellat cum nulla. Molestiae eum similique modi ipsam nihil facilis culpa laudantium, ut error. Recusandae, cumque aspernatur. Tempora, nisi maiores assumenda quae, odio est, nam iusto hic aut deleniti minima veniam odit sit molestias necessitatibus ducimus sed suscipit. Veniam quod sapiente praesentium aut, cumque nisi incidunt quasi vel, sed repellendus assumenda! Reiciendis inventore praesentium nemo quaerat minus. Facere illum omnis recusandae reprehenderit, aperiam, suscipit magni voluptatum aliquid culpa unde asperiores explicabo! Numquam quos quo nesciunt nostrum quod iusto hic voluptate perspiciatis? Doloribus omnis hic accusantium sunt consequuntur, nobis nesciunt odio amet adipisci iste minus, culpa quos delectus laboriosam velit numquam, obcaecati maiores voluptatibus necessitatibus vero fugit placeat earum quis corrupti? Dicta eveniet veniam sequi debitis, ipsum quis earum, modi assumenda autem quasi officia id similique itaque repellat culpa explicabo neque necessitatibus ad ipsam commodi atque! Nostrum, veniam qui sapiente officiis, nemo ipsam ullam saepe voluptas sunt odio iste eos? Delectus, atque optio magni, nobis fuga, sunt dolorum explicabo sit tempora nemo ducimus libero exercitationem officiis ipsum repellendus quia maxime facere! Ducimus cumque alias eum ut deserunt ipsum ex veniam voluptas perspiciatis sapiente beatae vel, eos autem voluptatibus nisi error numquam minus inventore voluptatum eveniet veritatis optio quibusdam deleniti facilis! Alias illum nostrum perferendis quod ut vel ea blanditiis enim corporis, aliquam, esse qui nesciunt eligendi beatae molestias, quia excepturi impedit repellendus saepe eius repellat vero ab? Quia reprehenderit at voluptatem, aut dolores reiciendis maiores velit amet corporis nemo eaque minus? Mollitia eveniet, aliquam, magni quo, placeat accusamus eius rerum temporibus ratione delectus ab. Temporibus ab sequi, nisi, autem vel eveniet animi obcaecati vero excepturi facilis voluptatibus ea quasi nobis quo voluptates! Culpa animi dignissimos neque eos nesciunt! Quas sunt optio ut, ex nemo similique adipisci nulla culpa non nobis, in maxime aperiam facere. Asperiores quod hic, dolore in facilis, dolorum esse reiciendis nesciunt voluptatum corrupti optio consectetur enim beatae tempore corporis illo nobis illum a sed ex repellendus, dolorem totam fuga. In nemo facere amet quos blanditiis ad itaque nobis cupiditate, inventore nostrum quaerat aliquam est architecto tenetur iusto earum necessitatibus nesciunt optio quia ab atque. Deleniti maxime aliquid, dolorum perferendis eveniet excepturi, praesentium commodi amet eius aspernatur velit totam sapiente nam dolor, maiores reiciendis eum omnis. Tempore porro optio temporibus est itaque rem facilis laudantium expedita asperiores repellat distinctio facere, vel sequi quibusdam numquam adipisci tenetur neque, sed hic quidem dolor nisi perferendis? Iusto aperiam, animi non ab quibusdam blanditiis pariatur amet. Molestiae aut rem, molestias ut in, quae aperiam voluptatem pariatur esse porro odio. Aperiam, distinctio natus? Nemo voluptatem labore perferendis voluptates veniam, suscipit architecto nihil rerum delectus, perspiciatis error nisi dolorem. Eius nihil, totam debitis ab est ullam deserunt voluptatum ad culpa perspiciatis cupiditate harum repellendus, fugit modi laboriosam nostrum ratione aspernatur, adipisci dolorum. Quae assumenda rem numquam incidunt voluptatibus optio explicabo quos, deserunt adipisci accusamus libero laudantium fugiat provident amet ea velit dolores hic odit laborum! Officiis amet nisi corporis illum excepturi vel, impedit natus obcaecati dolores quibusdam debitis quasi dolorum minus ex consequatur tenetur sit ad porro quidem doloremque voluptas suscipit reiciendis magnam. Repellendus quisquam, veniam assumenda ipsam laboriosam, pariatur quas ducimus doloribus, dicta sed doloremque neque? Sed impedit voluptatum reiciendis similique minus. Ex, est ut? Tempora, neque sapiente culpa reprehenderit adipisci eos officia perspiciatis odit, et consequuntur iusto! Totam aperiam nesciunt rerum. Aperiam facere fugiat sapiente expedita. Eos deleniti molestias, eius aspernatur porro alias ullam vel perferendis ad voluptate consequatur dolorem. Voluptatum vel odit dicta doloribus iure aliquid.
+  <div id="hospital">
+   <top/>
+   <goods name1="热门城市" :list="list" :data="hotdata" @change="change"></goods>
+   <goods :name1="city" :list="citylist" :data="cityshow" @change="change" show="true" @rotate="rotate"></goods>
+   <goods name1="等级类别" :list="otherlist" :data="otherdata" @change="change"></goods>
   </div>
 </template>
 
 <script>
+import top from "@/components/comtent/top/top"
+
+import show from "@/network/hospital/show"
+
+import goods from "./goods/goods"
 export default {
   data () {
     return {
+      list:["北京","上海","深圳","重庆","武汉","南京"],
+      current:0,
+      hotdata:[],
+      city:"",
+      showhotdata:[],
+      citylist:["成都","眉山","广元","绵阳","乐山","德阳"],
+      citycurrent:0,
+      citydata:[],
+      cityshow:[],
+      otherlist:["三甲","三乙","二甲","公立","民营","其它"],
+      othercurrent:0,
+      otherdata:[],
     };
   },
 
-  components: {},
+  components: {
+    top,
+    goods
+  },
+
+  created() {
+    this.city = this.$store.state.location.addressComponent?this.$store.state.location.addressComponent.province:"四川省";
+    this.gethotdata(this.list[this.current]);
+    this.getcitydata(this.citylist[this.citycurrent]);
+    this.getotherdata(this.otherlist[this.othercurrent]);
+  },
 
   computed: {},
 
   mounted(){},
 
-  methods: {}
+  methods: {
+    gethotdata(item){
+     show({
+       address:item
+     }).then(res=>{
+       this.hotdata = res.data;
+     }).catch(err=>{
+       console.log("hospital error");
+     })
+    },
+    getotherdata(item){
+     show({
+       address:item
+     }).then(res=>{
+       this.otherdata = res.data;
+     }).catch(err=>{
+       console.log("hospital error");
+     })
+    },
+    getcitydata(item){
+     show({
+       address:item
+     }).then(res=>{
+       this.citydata = res.data;
+       this.random();
+     }).catch(err=>{
+       console.log("hospital error");
+     })
+    },
+    change(item,name){
+      if(name == "热门城市")
+      this.gethotdata(item);
+      else if(name == this.city){
+      this.getcitydata(item);
+      }else if(name == "等级类别"){
+      this.getotherdata(item);
+      }
+    },
+    rotate(){
+       this.random();
+    },
+    random(){
+      this.cityshow = [];
+      for(let i=0;i<12;i++){
+         this.cityshow.push(this.citydata[Math.floor(Math.random()*this.citydata.length)]);
+       }
+    }
+  }
 }
 
 </script>
 <style scoped>
+#hospital{
+  margin: 94px auto 0;
+}
 </style>

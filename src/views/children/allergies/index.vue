@@ -1,7 +1,9 @@
 <!--  -->
 <template>
   <div>
-      allergies
+      <div>
+        
+      </div>
   </div>
 </template>
 

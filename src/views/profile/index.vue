@@ -15,7 +15,7 @@
           <div class="first">
             <div>{{profile.name}}</div>
             <div class="me">个人简介</div>
-            <div class="iconfont icon-location1 icon" :title="address">{{address}}</div>
+            <div class="iconfont icon-location1 icon" :title="address" @click="mapshow = true">{{address}}</div>
           </div>
           <div class="second">
             <ul>
@@ -25,8 +25,8 @@
               <li class="b">病例</li>
               <li class="b">过敏</li>
               <li class="a">{{profile.phone}}</li>
-              <li class="a">{{profile.age|extis}}</li>
               <li class="a">{{profile.sex|extis}}</li>
+              <li class="a">{{profile.age|extis}}</li>
               <li class="a">{{profile.malady|extis}}</li>
               <li class="a">{{profile.allergies|extis}}</li>
             </ul>
@@ -65,6 +65,7 @@
     <div id="good">
       <goods :data="good"/>
     </div>
+    <amap v-show="mapshow" @back="back"></amap>
   </div>
 </template>
 
@@ -74,6 +75,8 @@ import {mapState} from "vuex"
 import goods from "@/components/comtent/list/index"
 
 import show from '@/network/profile/show'
+
+import amap from './map/map'
 export default {
   name:"profile",
   data () {
@@ -103,7 +106,8 @@ export default {
       month:"",
       day:"",
       week:"",
-      good:[]
+      good:[],
+      mapshow:false
     };
   },
 
@@ -172,7 +176,8 @@ export default {
   },
 
   components: {
-    goods
+    goods,
+    amap
   },
 
   filters: {
@@ -197,6 +202,9 @@ export default {
     },
     random(){
       return Math.floor(Math.random()*91);
+    },
+    back(){
+      this.mapshow = false;
     }
   }
 }
@@ -219,13 +227,19 @@ export default {
   border-bottom: 1px solid rgba(0, 0, 0, .3);
 }
 .right>.foot>p{
-  width: 100%;
+  /* width: 100%; */
+  width: 90%;
+  margin: auto;
   height: 54px;
   line-height: 54px;
   text-align: start;
-  border-bottom: 1px solid rgba(0, 0, 0, .4);
+  /* border-bottom: 1px solid rgba(0, 0, 0, .4); */
+  border-bottom: 1px solid #e6ece8;
   font-size: 23px;
-  border-right: 1px solid rgb(0, 0, 0);
+  color: #666;
+}
+.right>.foot>p:nth-child(1){
+  color: #1abc9c;
 }
 .help{
   width: 100%;
@@ -242,7 +256,7 @@ export default {
 .hea{
   width: 100%;
   height: 60px;
-  background: rgb(110, 200, 132);
+  background: #1abc9c;
   color: white;
   font-size: 25px;
   line-height: 60px;
@@ -256,10 +270,11 @@ export default {
   width: 100%;
   height: 105px;
   display: flex;
-  /* justify-content: center; */
   color: rgb(110, 200, 132);
   /* margin-bottom: 10px; */
-  box-shadow: 0 5px 10px rgb(100, 100, 100);
+  /* box-shadow: 0 5px 10px rgb(100, 100, 100); */
+  box-shadow: 0 5px 10px #e2e4e3;
+  opacity: .8;
   font-size: 16px;
   flex-direction: column; 
 }
@@ -369,6 +384,7 @@ export default {
   text-align: start;
   padding-left: 60px;
   line-height: 60px;
+  color: #666;
 }
 .left>ul>li::after{
   content: "";

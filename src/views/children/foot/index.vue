@@ -30,9 +30,9 @@ export default {
   },
 
   created(){
-    this.list = this.item?this.item.split(";"):[];
+    this.list = localStorage.getItem("foot")?localStorage.getItem("foot").split(";"):[];
     this.time = localStorage.getItem("time")?localStorage.getItem("time").split(";"):[];
-    if(this.item){
+    if(localStorage.getItem("foot")){
       this.list.pop();
       this.show = false;
       for(let i=0;i<this.list.length;i++){
@@ -44,10 +44,6 @@ export default {
             })
         }
     }
-  },
-
-  props:{
-    item:null
   },
 
   components: {

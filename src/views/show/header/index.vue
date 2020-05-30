@@ -35,7 +35,7 @@ name:"goods",
     return {
         list:[
             {
-                title:"家廷常备",
+                title:"家中常备",
                 content:[
                     "体验套餐",
                     "计生避孕",

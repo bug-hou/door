@@ -30,7 +30,7 @@
       </div>
     </div>
   </div>
-  <div class="show" v-show="showdiv">已成功加载到我的医疗箱中</div>
+  <div class="show" v-show="showdiv">{{content}}</div>
 </div>
 </template>
 
@@ -40,10 +40,12 @@ import show from '@/network/profile/show'
 import changeCar from '@/network/home/cars'
 
 import goods from "@/components/comtent/list/index"
+import top from "@/components/comtent/top/top"
 
 import first from './header/head'
 import cont from './content/content'
-import top from "./top/top"
+
+import {mapState} from "vuex"
 export default {
     name:"detail",
   data () {
@@ -54,7 +56,8 @@ export default {
        image:"",
        showdata:null,
        good:[],
-       showdiv:false
+       showdiv:false,
+       content:"已成功加载到我的医疗箱中"
     };
   },
   created() {
@@ -86,7 +89,8 @@ export default {
   computed: {
     price(){
         return (Math.random()*101).toFixed(2);
-      }
+      },
+      ...mapState(["status"]),
   },
 
   mounted(){
@@ -96,6 +100,7 @@ export default {
       table:"medicine"
     }).then(res=>{
       this.good = res.data;
+      
     })
   },
 
@@ -107,6 +112,7 @@ export default {
         return Math.floor(Math.random()*200);
       },
       join(){
+        if(this.status){
       const date = new Date();
       const str = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate()+" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()+";";
       this.$store.commit("addCar",{
@@ -118,6 +124,11 @@ export default {
         time:this.$store.state.profile.time,
         car:this.$store.state.car
       })
+      this.content = "已成功加载到我的医疗箱中"
+      }else{
+         this.content = "你还没有登录，请登录后在进行操作"
+         console.log("nihoah");
+        }
       this.showdiv = true;
       setTimeout(() => {
         this.showdiv = false;
@@ -134,18 +145,21 @@ export default {
   top: 50%;
   transform: translate(-50%);
   width: 300px;
-  height: 300px;
+  height: 200px;
   background: rgba(0, 0, 0, .5);
-  color: white;
-  font-size: 25px;
+  color: #1abc9c;
+  font-size: 35px;
   line-height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
 }
 .box1{
   width: 485px;
   margin-top: 15px;
   margin-left: 15px;
   height: 285px;
-  background: rgba(100, 100, 100, .3);
+  background: #666;
   border-radius: 15px;
 }
 .box1>div:nth-child(2){
@@ -185,16 +199,17 @@ export default {
   font-size: 35px;
   border-radius: 15px;
   line-height: 75px;
+  font-weight: bold;
 }
 .dan>p:nth-child(1){
-  background: rgb(26, 188, 156);
+  background: #1abc9c;
   border: 1px solid rgb(172, 249, 234);
   color: white;
 }
 .dan>p:nth-child(2){
   background: rgb(172, 249, 234);
   color: rgb(12, 175, 160);
-  border: 1px solid rgb(26, 188, 156);
+  border: 1px solid #1abc9c;
 }
 .price>span:nth-child(2){
   color: #1abc9c;

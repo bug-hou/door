@@ -7,7 +7,7 @@
           <div class="iconfont icon-tubiao1" @click="dian">搜索</div>
           <ul class="list" v-show="show">
             <li v-for="(item,index) in list" :key="index" @click="push(item)">
-                  <span>名字{{item.name}}</span><span>商标{{item.title}}</span>
+                  <span>{{item.name}}</span><span>{{item.title}}</span>
               </li>
           </ul> 
       </div>
@@ -18,6 +18,7 @@
 </template>
 
 <script>
+import search from '@/network/search/search2'
 export default {
   data () {
     return {
@@ -33,7 +34,8 @@ export default {
              table:"medicine",
              data:this.data
          }).then(res=>{
-            list = res.data;
+             console.log(res.data);
+            this.list = res.data;
          })
       }
   },
@@ -82,14 +84,15 @@ export default {
 .input>ul{
     position: absolute;
     left: 0px;
-    padding-left: 5px;
     background: rgba(100, 100, 100, .3);
     top: 44px;
     width: 100%;
+    max-height: 235px;
+    overflow: hidden;
 }
 .input>ul>li{
     height: 25px;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     font-size: 16px;
     color: rgba(100, 100, 100, .8);
@@ -135,10 +138,10 @@ input{
 }
 .guang{
     flex: 1;
-    height: 44px;
+    height: 60px;
 }
 .guang>img{
-    width: 100%;
-    height: 100%;
+    width: 200px;
+    height: 60px;
 }
 </style>

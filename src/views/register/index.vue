@@ -209,7 +209,7 @@ img{
 }
 #int{
   width: 25%;
-  margin: 140px auto;
+  margin: 80px auto;
   border: 1px solid #999;
   /* background: #aaa; */
 }

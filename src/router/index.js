@@ -7,6 +7,7 @@ const show = ()=>import("../views/show/index");
 const profile = ()=>import("../views/profile/index");
 const cars = ()=>import("../views/cars/index");
 const hospital = ()=>import("../views/hospital/index");
+const hosdetail = ()=>import("../views/hosdetail/index");
 const register = ()=>import("../views/register/index");
 const detail = ()=>import("../views/detail/index");
 const goods = ()=>import("../views/goods/index");
@@ -85,6 +86,9 @@ Vue.use(VueRouter)
    },{
      path:"/goods",
      component:goods
+   },{
+     path:"/hosdetail/:id",
+     component:hosdetail
    }
 ]
 

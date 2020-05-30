@@ -33,7 +33,7 @@ export default {
              table:"medicine",
              data:this.data
          }).then(res=>{
-            list = res.data;
+            this.list = res.data;
          })
       }
   },
@@ -45,6 +45,7 @@ export default {
   methods: {
       push(data){
           this.$router.push("/detail/"+data.id);
+          let arr = [];
       },
       dian(){
           this.$router.push({
@@ -78,15 +79,17 @@ export default {
 }
 .input>ul{
     position: absolute;
-    left: 0px;
-    padding-left: 5px;
+    left: -2px;
     background: rgba(100, 100, 100, .3);
     top: 54px;
+    right: -2px;
     width: 100%;
+    max-height: 156px;
+    overflow: hidden;
 }
 .input>ul>li{
     height: 30px;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     font-size: 20px;
     color: rgba(100, 100, 100, .8);

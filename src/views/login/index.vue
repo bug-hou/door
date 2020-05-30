@@ -257,7 +257,7 @@ span{
   width: 100%;
   height: 40px;
   background: #1abc9c;
-  color: white;
+  color: black;
   font-size: 20px;
   text-align: center;
   line-height: 40px;
@@ -335,6 +335,8 @@ span{
   background: white;
   transform: translate(-50%);
   padding: 10px 20px;
+  border-radius: 10px;
+  opacity: .8;
 }
 #logIn{
   position: fixed;
@@ -343,5 +345,6 @@ span{
   top: 0;
   height: calc(100% - 94px);
   background-image: url(~@/assets/image/login1.png);
+  color: black;
 }
 </style>

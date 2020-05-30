@@ -50,6 +50,9 @@ export default {
 </script>
 <style scoped>
 @import url(//at.alicdn.com/t/font_1814765_zxopmvlc0al.css);
+img:hover{
+  transform: scale(1.5);
+}
 .iconfont{
   color: white;
 }
@@ -57,10 +60,12 @@ export default {
   width: 150px;
   height: 200px;
   margin: auto;
+  overflow: hidden;
 }
 img{
   width: 150px;
   height: 200px;
+  transition: all 1s linear;
 }
 .main>div{
   width: 160px;

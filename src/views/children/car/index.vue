@@ -34,9 +34,9 @@ export default {
 
   created(){
     if(this.$store.state.status){
-    this.list = this.item?this.item.split(";"):[];
+    this.list = this.$store.state.car?this.$store.state.car.split(";"):[];
     this.time = this.$store.state.profile.time.split(";")?this.$store.state.profile.time.split(";"):[];
-    if(this.item){
+    if(this.$store.state.car){
       this.list.pop();
       this.show = false;
       if(this.list.length>=4){
@@ -60,10 +60,6 @@ export default {
       }
     }
     }
-  },
-
-  props:{
-    item:null
   },
 
   components: {

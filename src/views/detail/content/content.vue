@@ -12,7 +12,7 @@
               <span :class="{active:show}" @click="show=true">商品详情</span><span :class="{active:!show}" @click="show=false">评价</span>
           </div>
           <div>
-              <div v-if="!showdata" class="no">暂无商品详情</div>
+              <div v-if="sfshow" class="no">暂无商品详情</div>
               <div v-else class="yes" @click="big=true">
                   <ul class="box">
                       <li v-for="(item,index) in showdata" :key="index">{{item}}</li>
@@ -21,6 +21,7 @@
           </div>
       </div>
       <div v-if="big" class="big">
+          <div class="iconfont icon-guanbi" @click="close"></div>
          <li v-for="(item,index) in showdata" :key="index">{{item}}</li>
       </div>
   </div>
@@ -31,11 +32,14 @@ export default {
   data () {
     return {
         show:true,
-        big:false
+        big:false,
+        sfshow:false
     };
   },
 
   mounted() {
+    //  this.sfshow = this.showdata.length<2?true:false;
+     console.log(this.showdata);
   },
 
   props:{
@@ -45,7 +49,10 @@ export default {
           }
       },
       showdata:{
-          default:null
+          default(){
+              return [];
+          },
+          type:Array
       },
   },
   
@@ -55,40 +62,61 @@ export default {
   components: {},
 
   computed: {
-      
+    //   sfshow(){
+    //       console.log(this.showdata.length);
+    //      return this.showdata.length<2?true:false;
+    //   }
   },
 
   methods: {
+      close(){
+          this.big = false;
+      }
   },
 }
 
 </script>
 <style scoped>
+@import url(//at.alicdn.com/t/font_1814765_x2rurwiqq5.css);
+.iconfont{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 35px;
+    line-height: 50px;
+}
 .big>li:nth-child(odd){
-  text-align: center;
-  color: rgba(100, 100, 100, .8);
+  text-align: start;
+  color: rgba(200, 200, 200, .8);
   justify-self: center;
   align-self: center;
+  /* border-bottom: 1px dashed rgba(150, 150, 150, .8); */
+  border-bottom: 1px solid rgba(150, 150, 150, .8);
 }
 .big>li{
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  width: 100%;
-  height: 68px;
-  line-height: 68px;
-  text-align: start;
+    width: 100%;
+    color: white;
+    /* text-align: center; */
+    text-align: start;
+    line-height: 30px;
 }
 .big{
     display: grid;
-    position: fixed;
-    top: 50%;
+    position: absolute;
+    top: 10%;
     left: 50%;
     width: 1000px;
-    transform: translateX(-50%) translateX(-50%);
+    transform: translateX(-50%);
     grid-template-columns: 200px 800px;
     grid-template-rows: repeat(2,auto);
+    min-height: 600px;
     background: rgba(10, 10, 10, .7);
+    z-index: 10;
+    align-items: center;
+    border-radius: 15px;
 }
 .no{
     font-size: 30px;
@@ -107,8 +135,8 @@ export default {
     overflow: hidden;
 }
 .box>li:nth-child(odd){
-  text-align: center;
-  color: rgba(100, 100, 100, .8);
+  /* text-align: center; */
+  color: #666;
   font-size: 20px;
 }
 .box>li{
@@ -144,7 +172,8 @@ export default {
 .content{
     width: 100%;
     height: 370px;
-    background: rgb(189, 187, 187);
+    background: #f6f6f6;
+    border-radius: 12px;
 }
 #content{
     padding-left: 15px;

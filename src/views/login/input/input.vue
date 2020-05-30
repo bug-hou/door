@@ -80,7 +80,7 @@ export default {
     position: absolute;
 }
 .text{
-    font-size: 16px;
+  font-size: 16px;
   left: 0;
   width: 50px;
 }

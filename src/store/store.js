@@ -24,6 +24,18 @@ export default new vuex.Store({
             state.car = item.car;
             state.status = true;
         },
+        delete(state){
+           state.profile = {};
+           state.status = false;
+        },
+        setaddress(state,item){
+            state.address = item
+        },
+        setprofile(state,obj){
+            for(let i in obj){
+                state[i] = obj[i];
+            }
+        },
         addStar(state,item){
             state.star.push(item);
         },
