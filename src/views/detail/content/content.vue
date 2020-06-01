@@ -99,8 +99,8 @@ export default {
 .big>li{
     width: 100%;
     color: white;
-    /* text-align: center; */
-    text-align: start;
+    text-align: center;
+    /* text-align: start; */
     line-height: 30px;
 }
 .big{
@@ -135,7 +135,7 @@ export default {
     overflow: hidden;
 }
 .box>li:nth-child(odd){
-  /* text-align: center; */
+  text-align: center;
   color: #666;
   font-size: 20px;
 }
@@ -152,12 +152,13 @@ export default {
   width: 100%;
   height: 340px;
 }
-.active{
+.title>.active{
   color: #1abc9c;
 }
 .title>span{
     width: 49%;
-    border-right: 1px solid rgba(100, 100, 100, .5);
+    color: #666;
+    border-right: 1px solid #e1e1e1;
 }
 .title{
     width: 30%;
@@ -167,7 +168,7 @@ export default {
     justify-content: space-around;
     color: white;
     line-height: 30px;
-    border-bottom: 1px solid rgba(100, 100, 100, .5);
+    border-bottom: 1px solid #e1e1e1;
 }
 .content{
     width: 100%;

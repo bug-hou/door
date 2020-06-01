@@ -33,7 +33,7 @@ export default {
 
   computed: {
       header(){
-          return "全部>"+this.type;
+          return "全部  >"+"  "+this.type;
       },
       push(item){
 
@@ -53,7 +53,7 @@ export default {
     margin: auto;
 }
 .header{
-    width: 100px;
+    width: 200px;
     margin-left: 20px;
     height: 40px;
     line-height: 40px;

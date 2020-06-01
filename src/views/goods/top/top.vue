@@ -120,7 +120,7 @@ input{
     width: 65%;
     height: 80px;
     display: flex;
-    margin-left: 20%;
+    margin-left: 17%;
     justify-content: space-between;
     align-items: center;
 }

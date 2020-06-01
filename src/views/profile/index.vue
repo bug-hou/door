@@ -10,8 +10,8 @@
       </div>
       <div class="main">
         <div class="header">
-            <div class="head"><img :src="profile.header" alt=""></div>
-            <div class="box">
+        <div class="head"><img :src="profile.header" alt=""></div>
+        <div class="box">
           <div class="first">
             <div>{{profile.name}}</div>
             <div class="me">个人简介</div>
@@ -34,9 +34,9 @@
           </div>
         </div>
         <div class="footer">
-          <div class="title">{{list[current]}}</div>
+          <div class="title" style="color:#666">{{list[current]}}</div>
           <div>
-            <router-view class="child" :item="show[current]"></router-view>
+            <router-view class="child"></router-view>
           </div>
         </div>
         <div></div>
@@ -81,7 +81,6 @@ export default {
   name:"profile",
   data () {
     return {
-      profile:{},
       list:[
         "我的购物车",
         "我的足迹",
@@ -114,13 +113,6 @@ export default {
   created(){
     if(!this.$store.state.status){
       this.$router.push("/login");
-    }else{
-      this.profile=this.$store.state.profile;
-      this.show[0] = this.$store.state.car;
-      this.show[1] = localStorage.getItem("foot")?localStorage.getItem("foot"):null;
-      this.show[2] = this.profile.malady;
-      this.show[3] = this.profile.allergies;
-      this.show[4] = this.profile;
     }
   },
 
@@ -187,10 +179,7 @@ export default {
   },
 
    computed: {
-     ...mapState(["address"]),
-     split(item){
-       return item.split(";");
-     },
+     ...mapState(["address","profile"]),
    },
 
   mounted(){},
@@ -226,11 +215,17 @@ export default {
   font-size: 25px;
   border-bottom: 1px solid rgba(0, 0, 0, .3);
 }
+.foot{
+  background: #f8fffa;
+  box-shadow: 0px 14px 27px rgba(226, 228, 227, .8);
+}
 .right>.foot>p{
   /* width: 100%; */
+  padding-top: 5px;
+  box-sizing: border-box;
   width: 90%;
   margin: auto;
-  height: 54px;
+  height: 55px;
   line-height: 54px;
   text-align: start;
   /* border-bottom: 1px solid rgba(0, 0, 0, .4); */
@@ -283,15 +278,17 @@ export default {
 }
 .footer{
   width: 100%;
-  margin-top: 10px;
 }
 .footer>.title{
+  margin-top: 5px;
   width: 100%;
   height: 47px;
-  background: #ccc;
+  background: #f4f4f4;
   font-size: 20px;
   font-weight: bold;
   line-height: 47px;
+  margin-bottom: 5px;
+  border-radius: 10px;
 }
 .child{
   width: 100%;
@@ -346,7 +343,8 @@ export default {
   width: 100%;
   height: 120px;
   display: flex;
-  background: #ddd;
+  background: #f4f4f4;
+  border-radius: 10px;
 }
 .header>.box{
   display: flex;
@@ -395,11 +393,13 @@ export default {
   transform: rotate(-45deg);
   display: inline-block;
 }
-.active{
+.left>ul>.active{
   color: #1abc9c;
 }
 .main{
   width: 60%;
+  background: white;
+  color: #666;
 }
 .all{
   width: 100%;

@@ -171,7 +171,7 @@ input:focus{
   background: rgb(233, 233, 233);
   color: #666;
   width: 420px;
-  height: 620px;
+  height: 610px;
   border-radius: 15px;
 }
 </style>

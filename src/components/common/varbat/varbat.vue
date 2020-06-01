@@ -17,9 +17,11 @@
     <item path="/hospital">
     <div class="a">医院</div>
     </item>
-    <div class="a">联系医生</div>
     <item path="/cars">
-    <div class="a">收藏夹</div>
+    <div class="a">医生</div>
+    </item>
+    <item path="/door">
+    <div class="a">医生认证</div>
     </item>
     <item path="/profile">
     <div class="a">个人中心</div>
@@ -31,7 +33,6 @@
     </div>
     <div v-if="show" class="me a">
       <div class="img">未登录</div>
-      <p>请登录</p>
     </div>
     <div v-else class="me">
       <div class="img"><img :src="me.header" alt=""></div>
@@ -128,9 +129,11 @@ export default {
   height: 60px;
   background: #999;
   font-size: 14px;
-  line-height: 50px;
+  line-height: 60px;
   border-radius: 50%;
   overflow: hidden;
+  color: #666;
+  margin-top: 5px;
 }
 img{
   width: 100%;

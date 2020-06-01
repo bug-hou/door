@@ -6,8 +6,8 @@
       <goods titles="中西药品">
         <img src="~@/assets/image/show/show1.png" alt="">
       </goods>
-        <goods titles="滋补养生">
-        <img src="~@/assets/image/show/show2.png" alt="">
+        <goods titles="美容护肤">
+        <img src="~@/assets/image/show/show6.png" alt="">
       </goods>
         <goods titles="医疗器械">
         <img src="~@/assets/image/show/show3.png" alt="">

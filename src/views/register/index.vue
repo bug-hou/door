@@ -147,6 +147,7 @@ export default {
            header:null,
            phone:this.obj[3]
          }).then(res=>{
+           console.log(res);
            if(res.data){
              localStorage.setItem("time","");
              localStorage.setItem("foot","");

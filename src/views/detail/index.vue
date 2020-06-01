@@ -147,7 +147,7 @@ export default {
   width: 300px;
   height: 200px;
   background: rgba(0, 0, 0, .5);
-  color: #1abc9c;
+  color: white;
   font-size: 35px;
   line-height: 50px;
   display: flex;
@@ -159,19 +159,21 @@ export default {
   margin-top: 15px;
   margin-left: 15px;
   height: 285px;
-  background: #666;
+  background: #f4f4f4;
   border-radius: 15px;
 }
 .box1>div:nth-child(2){
-  width: 320px;
+  width: 350px;
   margin: auto;
   display: grid;
   grid-template-rows:repeat(2,50px);
-  grid-template-columns:repeat(2,160px);
+  grid-template-columns:repeat(2,175px);
   justify-items: center;
   align-items: center;
   font-size: 32px;
   color: #666;
+  row-gap: 10px;
+  font-weight: 100;
 }
 .box1>div:nth-child(1){
   margin-top: 30px;
@@ -185,7 +187,7 @@ export default {
   width: 292px;
   height: 225px;
   margin-top: 10px;
-  background: rgba(100, 100, 100, .3);
+  background: #f4f4f4;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -196,7 +198,7 @@ export default {
 .dan>p{
   width: 200px;
   height: 75px;
-  font-size: 35px;
+  font-size: 28px;
   border-radius: 15px;
   line-height: 75px;
   font-weight: bold;
@@ -227,7 +229,7 @@ export default {
   width: 292px;
   height: 50px;
   color: rgba(100, 100, 100, .8);
-  background: rgba(100, 100, 100, .5);
+  background: #f4f4f4;
   border-radius: 15px;
   word-spacing: 5px;
 }

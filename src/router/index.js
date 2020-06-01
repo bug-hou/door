@@ -11,6 +11,7 @@ const hosdetail = ()=>import("../views/hosdetail/index");
 const register = ()=>import("../views/register/index");
 const detail = ()=>import("../views/detail/index");
 const goods = ()=>import("../views/goods/index");
+const door = ()=>import("../views/door/index");
 
 const car = ()=>import("../views/children/car/index");
 const foot = ()=>import("../views/children/foot/index");
@@ -89,6 +90,9 @@ Vue.use(VueRouter)
    },{
      path:"/hosdetail/:id",
      component:hosdetail
+   },{
+     path:"/door",
+     component:door
    }
 ]
 

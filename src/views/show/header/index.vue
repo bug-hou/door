@@ -15,8 +15,8 @@
      </div>
      <div class="box">
          <div class="logo">
-             <img src="~@/assets/image/logo.png" alt="">
-             <h2>医站通</h2>
+             <img src="~@/assets/image/register.png" alt="">
+             <p>用了浑身轻松</p>
          </div>
          <div class="icon">
              <p class="iconfont icon-zhengpin1">自营正品</p>
@@ -87,7 +87,7 @@ name:"goods",
                     "制氧机"
                 ]
             },{
-                title:"滋补养生",
+                title:"美容护肤",
                 content:[
                     "蜂蜜",
                     "润肺养胃",
@@ -145,12 +145,16 @@ name:"goods",
     font-size: 40px;
     color: #1abc9c;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px dashed #999;
+    border-bottom: 1px solid #e6e6e6;
+}
+.logo>p{
+    font-size: 23px;
 }
 img{
-    width: 50px;
+    width: 70%;
     height: 50px;
 }
 .icon>p{
@@ -160,7 +164,7 @@ img{
   line-height: 100px;
   text-align: center;
   color: #1abc9c;
-    border-bottom: 1px dashed #999;
+    border-bottom: 1px solid #e6e6e6;
 }
 .active{
     color: #1abc9c;

@@ -75,6 +75,9 @@ export default {
     transform: rotate(360deg);
   }
 }
+.show>div:hover{
+  color: #1abc9c;
+}
 .rotate{
   animation: move 1s linear forwards;
 }
