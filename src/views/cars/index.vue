@@ -1,7 +1,7 @@
 <!--  -->
 <template>
   <div>
-      cars
+      <img src="~@/assets/image/door.png" alt="">
   </div>
 </template>
 
@@ -23,4 +23,8 @@ export default {
 
 </script>
 <style scoped>
+div>img{
+  height: calc(100% - 94px);
+  width: 100%;
+}
 </style>
