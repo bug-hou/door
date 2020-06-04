@@ -5,7 +5,7 @@
       <div class="content">
           <div class="main">
               <div class="name">名字:{{item.name}}</div>
-              <div>{{time}}</div>
+              <div>{{time.replace("null","")}}</div>
           </div>
           <div class="type">
               <div>类型:{{item.type}}</div>

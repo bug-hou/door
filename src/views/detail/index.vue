@@ -100,7 +100,6 @@ export default {
       table:"medicine"
     }).then(res=>{
       this.good = res.data;
-      
     })
   },
 
@@ -127,13 +126,12 @@ export default {
       this.content = "已成功加载到我的医疗箱中"
       }else{
          this.content = "你还没有登录，请登录后在进行操作"
-         console.log("nihoah");
         }
       this.showdiv = true;
       setTimeout(() => {
         this.showdiv = false;
       }, 2000);
-      }
+      },
   }
 }
 

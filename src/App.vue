@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <varbat></varbat>
-    <keep-alive exclude="home,detail,goods,profile,login,good,hospital">
+    <keep-alive exclude="home,detail,goods,profile,login,good,hosdetail">
     <router-view  class="view"/>
     </keep-alive>
   </div>

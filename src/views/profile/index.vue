@@ -182,7 +182,8 @@ export default {
      ...mapState(["address","profile"]),
    },
 
-  mounted(){},
+  mounted(){
+  },
 
   methods: {
     push(index){

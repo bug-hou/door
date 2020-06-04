@@ -78,10 +78,10 @@ export default {
       this.show = true;
       this.data = "修改成功";
       let obj = {
-        name:this.name,
-        id:this.id,
-        phone:this.phone,
-        age:this.age
+        name:this.item.name,
+        id:this.item.id,
+        phone:this.item.phone,
+        age:this.item.age
       };
       this.$store.commit("setprofile",obj);
       for(let i in this.obj){

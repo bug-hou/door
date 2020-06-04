@@ -35,7 +35,7 @@ export default {
   created(){
     if(this.$store.state.status){
     this.list = this.$store.state.car?this.$store.state.car.split(";"):[];
-    this.time = this.$store.state.profile.time.split(";")?this.$store.state.profile.time.split(";"):[];
+    this.time = this.$store.state.profile.time?this.$store.state.profile.time.split(";"):[];
     if(this.$store.state.car){
       this.list.pop();
       this.show = false;

@@ -75,6 +75,7 @@ import detail from "@/network/hospital/detail"
 
 import top from "./top/top"
 export default {
+  name:"hosdetail",
   data () {
     return {
         data:{},

@@ -5,7 +5,7 @@
       <div class="main">
           <p>{{item.name|replace}}</p>
         <div>
-          <p>{{item.price}}</p>
+          <p>{{price()}}</p>
         </div>
       </div>
   </div>
@@ -20,9 +20,6 @@ export default {
 
   props:{
       item:{}
-  },
-  created() {
-    this.price();
   },
 
   filters:{
@@ -39,7 +36,7 @@ export default {
 
   methods: {
     price(){
-      this.item.price = '￥'+(Math.random()*100).toFixed(2) + "元";
+      return '￥'+(Math.random()*100).toFixed(2) + "元";
     },
     push(){
       this.$router.push("/detail/"+this.item.id);

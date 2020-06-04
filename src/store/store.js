@@ -21,7 +21,7 @@ export default new vuex.Store({
         addProfile(state,item){
             state.profile = item;
             state.star = item.star;
-            state.car = item.car;
+            state.car = item.car?item.car:"";
             state.status = true;
         },
         delete(state){
@@ -33,7 +33,7 @@ export default new vuex.Store({
         },
         setprofile(state,obj){
             for(let i in obj){
-                state[i] = obj[i];
+                state.profile[i] = obj[i];
             }
         },
         addStar(state,item){

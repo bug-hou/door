@@ -106,7 +106,7 @@ export default {
 .big{
     display: grid;
     position: absolute;
-    top: 10%;
+    top: 20%;
     left: 50%;
     width: 1000px;
     transform: translateX(-50%);

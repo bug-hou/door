@@ -24,7 +24,8 @@ export default {
 </script>
 <style scoped>
 div>img{
-  height: calc(100% - 94px);
+  height: calc(100vh - 99px);
+  /* font-size: 0; */
   width: 100%;
 }
 </style>

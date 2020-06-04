@@ -6,7 +6,7 @@
           <div class="iconfont icon-tubiao1" @click="dian">搜索</div>
           <ul class="list" v-show="show">
               <li v-for="(item,index) in list" :key="index" @click="push(item)">
-                  <span>名字{{item.name}}</span><span>商标{{item.title}}</span>
+                  <span>{{item.name}}</span><span>{{item.title}}</span>
               </li>
           </ul> 
       </div>
@@ -29,12 +29,16 @@ export default {
 
   watch: {
       data(){
+          if(this.data!==""){
          search({
              table:"medicine",
              data:this.data
          }).then(res=>{
             this.list = res.data;
          })
+          }else{
+              this.list = []
+          }
       }
   },
 
@@ -79,11 +83,10 @@ export default {
 }
 .input>ul{
     position: absolute;
-    left: -2px;
-    background: rgba(100, 100, 100, .3);
-    top: 54px;
-    right: -2px;
-    width: 100%;
+    left: -3px;
+    background: white;
+    top: 51px;
+    right: -3px;
     max-height: 156px;
     overflow: hidden;
 }
@@ -91,13 +94,15 @@ export default {
     height: 30px;
     justify-content: space-between;
     align-items: center;
-    font-size: 20px;
-    color: rgba(100, 100, 100, .8);
-    border-bottom: 1px solid black;
+    font-size: 16px;
+    color: black;
     display: flex;
+    margin-left: 20px;
 }
 .input>ul>li>span:nth-child(2){
     font-size: 15px;
+    margin-left: 0px;
+    margin-right: 20px;
 }
 .input{
     position: relative;
